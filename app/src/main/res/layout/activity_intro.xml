@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.IntroActivity"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/onboarding_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skip"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewPager"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/onboarding_buttom_next"
+        app:layout_constraintTop_toBottomOf="@id/onboarding_skip" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/indicator_selector"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/onboarding_buttom_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        app:layout_constraintHorizontal_bias="0"
+        app:tabIndicatorColor="@color/gradient_color_end">
+    </com.google.android.material.tabs.TabLayout>
+
+    <Button
+        android:id="@+id/onboarding_buttom_next"
+        android:layout_width="95dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/brckground_btn_next"
+        android:drawableTop="@drawable/ic_arrow_next_ligth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPager"
+        android:paddingTop="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
