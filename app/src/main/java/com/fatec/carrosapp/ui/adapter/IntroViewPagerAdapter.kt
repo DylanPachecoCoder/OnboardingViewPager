@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import com.fatec.carrosapp.R
-import com.fatec.carrosapp.ui.fragment.ScreenItem
+import com.fatec.carrosapp.model.ScreenItem
 
 class IntroViewPagerAdapter(
     private var context: Context,
